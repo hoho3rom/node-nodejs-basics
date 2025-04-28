@@ -1,5 +1,5 @@
-import { Transform } from 'node:stream';
-import { pipeline } from 'node:stream/promises';
+import { Transform } from 'stream';
+import { pipeline } from 'stream/promises';
 
 const transformReverse = new Transform({
     transform(chunk, _, callback) {
