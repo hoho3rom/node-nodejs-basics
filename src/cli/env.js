@@ -1,3 +1,5 @@
+import process from 'process';
+
 const parseEnv = () => {
     const result = Object.entries(process.env)
         .reduce((line, [key, value]) => line + (key.startsWith('RSS_') ? `${key}=${value}; ` : ''), '');

@@ -42,4 +42,4 @@ myServer.listen(PORT, () => {
 export default {
     unknownObject,
     myServer
-}
+};

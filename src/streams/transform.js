@@ -1,9 +1,9 @@
 import { Transform } from 'stream';
 import { pipeline } from 'stream/promises';
 
-const transformReverse = new Transform({
+const reverse = new Transform({
     transform(chunk, _, callback) {
-        const reversedString = chunk.toString().trim().split('').reverse().join('');
+        const reversedString = chunk.toString().trim().split('').reverse().join('') + '\n';
         callback(null, reversedString)
     },
 });
@@ -14,7 +14,7 @@ const transform = async () => {
 
     await pipeline(
         readFromTerminal,
-        transformReverse,
+        reverse,
         writeToTerminal
     );
 };

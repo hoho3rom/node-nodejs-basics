@@ -5,7 +5,7 @@ import { createGunzip } from 'zlib';
 const decompress = async () => {
     const gunzip = createGunzip();
     const readFromFile = createReadStream(`${import.meta.dirname}/files/archive.gz`);
-    const writeToFile = createWriteStream(`${import.meta.dirname}/files/fileToCompresss.txt`);
+    const writeToFile = createWriteStream(`${import.meta.dirname}/files/fileToCompress.txt`);
 
     await pipeline(
         readFromFile,
